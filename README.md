@@ -3,8 +3,8 @@
 <font style="color:rgb(31, 35, 40);">To install all dependencies, use the following commands:</font>
 
 ```plain
-conda create -n linchain python=3.10
-source activate linchain
+conda create -n lorikit python=3.10
+source activate lorikit
 pip install -r requirements.txt
 ```
 
@@ -19,11 +19,11 @@ To run the train and evaluation script, use the following commands (modify the s
 ```plain
 # commonsense reasoning
 cd commonsense_reasoning
-bash train_linchain.sh
+bash train_lorikit.sh
 
 # arithmetic reasoning
 cd arithmetic_reasoning
-bash train_linchain.sh
+bash train_lorikit.sh
 
 # glue
 cd glue

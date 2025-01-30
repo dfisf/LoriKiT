@@ -45,7 +45,7 @@ def train(
         lora_alpha: int = 16,
         lora_dropout: float = 0.05,
         lora_target_modules: List[str] = None,
-        use_linchain: bool=False,
+        use_lorikit: bool=False,
         mixer_num: bool = 1,
         # bottleneck adapter hyperparams
         bottleneck_size: int = 256,
@@ -80,7 +80,7 @@ def train(
         f"cutoff_len: {cutoff_len}\n"
         f"val_set_size: {val_set_size}\n"
         f"lora_r: {lora_r}\n"
-        f"use_linchain: {use_linchain}\n" #! added
+        f"use_lorikit: {use_lorikit}\n" #! added
         f"mixer_num: {mixer_num}\n" #! added
         f"lora_alpha: {lora_alpha}\n"
         f"lora_dropout: {lora_dropout}\n"
@@ -199,7 +199,7 @@ def train(
         config = LoraConfig(
             r=lora_r,
             lora_alpha=lora_alpha,
-            lora_use_mixer=use_linchain,
+            lora_use_mixer=use_lorikit,
             mixer_num=mixer_num,
             target_modules=target_modules,
             lora_dropout=lora_dropout,

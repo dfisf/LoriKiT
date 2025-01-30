@@ -7,8 +7,8 @@ mixer_num=3
 
 model_p_or_n=xxxx
 
-model_path=trained_models/linchain-$mixer_num-r$rank-a$alpha-3e4
-results_path=results/linchain-$mixer_num-r$rank-a$alpha-3e4
+model_path=trained_models/lorikit-$mixer_num-r$rank-a$alpha-3e4
+results_path=results/lorikit-$mixer_num-r$rank-a$alpha-3e4
 
 mkdir -p $model_path
 mkdir -p $results_path
@@ -26,7 +26,7 @@ CUDA_VISIBLE_DEVICES=$gpuid python -u finetune.py \
   --adapter_name lora \
   --lora_r $rank \
   --lora_alpha $alpha \
-  --use_linchain \
+  --use_lorikit \
   --mixer_num $mixer_num \
   --target_modules "["q_proj", "k_proj", "v_proj", "up_proj", "down_proj"]"
 
